@@ -27,7 +27,7 @@ This project aims to analyze Walmart's sales data to identify key factors that i
 
 > 2. Which city is each branch located in?
 
-### Products
+### Product Insight
 > 1. How many unique product lines does the data have?
 
 > 2. What is the most common payment method?
@@ -52,7 +52,7 @@ This project aims to analyze Walmart's sales data to identify key factors that i
 
 > 12. What is the average rating of each product line?
 
-### Sales
+### Sales Insight
 > 1. Number of sales made in each time of the day per weekday
 
 > 2. Which of the customer types brings the most revenue?
@@ -61,7 +61,7 @@ This project aims to analyze Walmart's sales data to identify key factors that i
 
 > 4. Which customer type pays the most in VAT?
 
-### Customer
+### Customer Insight
 > 1. How many unique customer types does the data have?
 
 > 2. How many unique payment methods does the data have?

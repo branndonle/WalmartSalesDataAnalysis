@@ -5,13 +5,25 @@ This project's goals are to explore the Walmart Sales data to gain valueable kno
 
 
 ### Objective
-This project aims to analyze Walmart's sales data to identify key factors that influence sales performance across various branches. By exploring different variables, we seek to gain valuable insights into how different elements impact branch-specific sales.
+This project aims to analyze Walmart's sales data to identify key factors that influence sales performance across various branches. By exploring different variables, we seek to gain valuable insights into how different elements impact branch specific sales.
+
+## Approach Used
+Data Wrangling: This is the first step where inspection of data is done to make sure NULL values and missing values are detected and data replacement methods are used to replace, missing or NULL values.
+1. Build a database
+
+2. Create table and insert the data.
+3. Select columns with null values in them. There are no null values in our database as in creating the tables, we set NOT NULL for each field, hence null values are filtered out.
+
+## Feature Engineering: This will generate new columns while using existing columns.
+1. Add a new column, time_of_day, to give insight on sales based on the time of the day (Morning, Afternoon, or Evening). 
+3. Add a new column, day_name, which signifies the day each transaction took place (Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday). This aids in answering the question on which day of the week each branch is the slowest, moderate, and busiest.
+4. Add a new column, month_name, that contains the month of the year when the transaction took place (Jan, Feb, Mar, etc). This will allow us to determine which month of the year is the slowest, when it is moderate, and where we make the most sales/profit.
 
 ## Business Inquries
-### Generic Questions
-1. How many unique cities does the data have?
+### General Questions
+1. How many unique cities are there?
 
-2. In which city is each branch?
+2. Which city is each branch located in?
 
 ### Products
 1. How many unique product lines does the data have?

@@ -15,9 +15,11 @@ Data Wrangling: This is the first step where inspection of data is done to make 
 3. Select columns with null values in them. There are no null values in our database as in creating the tables, we set NOT NULL for each field, hence null values are filtered out.
 
 ## Feature Engineering: This will generate new columns while using existing columns.
-1. Add a new column, time_of_day, to give insight on sales based on the time of the day (Morning, Afternoon, or Evening). 
-3. Add a new column, day_name, which signifies the day each transaction took place (Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday). This aids in answering the question on which day of the week each branch is the slowest, moderate, and busiest.
-4. Add a new column, month_name, that contains the month of the year when the transaction took place (Jan, Feb, Mar, etc). This will allow us to determine which month of the year is the slowest, when it is moderate, and where we make the most sales/profit.
+1. Add a new column, time_of_day, to give insight on sales based on the time of the day (Morning, Afternoon, or Evening).
+   
+2. Add a new column, day_name, which signifies the day each transaction took place (Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday). This aids in answering the question on which day of the week each branch is the slowest, moderate, and busiest.
+   
+3. Add a new column, month_name, that contains the month of the year when the transaction took place (Jan, Feb, Mar, etc). This will allow us to determine which month of the year is the slowest, when it is moderate, and where we make the most sales/profit.
 
 ## Business Inquries
 ### General Questions
@@ -57,7 +59,7 @@ Data Wrangling: This is the first step where inspection of data is done to make 
 
 3. Which city has the largest tax percent/ VAT (Value Added Tax)?
 
-18.Which customer type pays the most in VAT?
+4. Which customer type pays the most in VAT?
 
 ### Customer
 1. How many unique customer types does the data have?

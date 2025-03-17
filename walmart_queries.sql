@@ -93,7 +93,8 @@ FROM walmart_sales_data_staging;
 SELECT *
 FROM walmart_sales_data_staging;
 
--- General Questions
+-- -------------------------------------------------------------------------------- GENERAL QUESTIONS -------------------------------------------------------------------------------------
+
 -- 1. How many unique cities are there? 
 SELECT DISTINCT city
 FROM walmart_sales_data_staging;
@@ -101,8 +102,7 @@ FROM walmart_sales_data_staging;
 -- 2. Which city is each branch located in?
 SELECT DISTINCT city, branch
 FROM walmart_sales_data_staging;
-
--- Product
+-- -------------------------------------------------------------------------------- PRODUCT INSIGHT ---------------------------------------------------------------------------------------
 -- How many unique product lines does the data have? 
 SELECT COUNT(DISTINCT product_line) AS unique_products
 FROM walmart_sales_data_staging;
@@ -182,6 +182,72 @@ GROUP BY product_line
 ORDER BY avg_rating DESC;
 
 SELECT * FROM walmart_sales_data_staging;
+
+-- -------------------------------------------------------------------------------- SALES INSIGHT-----------------------------------------------------------------------------------------
+
+-- 1. Number of sales made in each time of the day per weekday
+SELECT time_of_day, COUNT(*) total_sales_per_day
+FROM walmart_sales_data_staging
+WHERE day_of_week IN ('MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY')
+GROUP BY time_of_day
+ORDER BY total_sales_per_day DESC;
+
+-- 2. Which of the customer types brings the most revenue?
+SELECT customer_type, SUM(total) AS total_revenue
+FROM walmart_sales_data_staging
+GROUP BY customer_type
+ORDER BY total_revenue DESC;
+
+-- 3. Which city has the largest tax percent/VAT (Value Added Tax)?
+SELECT city, AVG(VAT) as avg_vat
+FROM walmart_sales_data_staging
+GROUP BY city
+ORDER BY avg_vat DESC;
+
+
+-- 4. Which customer type pays the most in VAT?
+SELECT customer_type, avg(VAT) as avg_vat
+FROM walmart_sales_data_staging
+GROUP BY customer_type
+ORDER BY avg_vat DESC;
+
+SELECT * FROM walmart_sales_data_staging;
+
+-- -------------------------------------------------------------------------------- CUSTOMER INSIGHT ---------------------------------------------------------------------------------------
+
+-- 1. How many unique customer types does the data have?
+SELECT COUNT(DISTINCT customer_type) AS unique_customers
+FROM walmart_sales_data_staging;
+
+-- 2. How many unique payment methods does the data have?
+SELECT COUNT(DISTINCT payment_method) AS unique_payment
+FROM walmart_sales_data_staging;
+
+-- 3. What is the most common customer type?
+SELECT customer_type, COUNT(*) AS trans_count
+FROM walmart_sales_data_staging
+GROUP BY customer_type; 
+
+-- 4. Which customer type makes the most transactions?
+SELECT customer_type, SUM(total) AS most_transactions
+FROM walmart_sales_data_staging 
+GROUP BY customer_type
+ORDER BY most_transactions DESC;
+
+-- 5. What is the gender of most of the customers?
+SELECT DISTINCT gender, COUNT(*) AS gen_cnt
+FROM walmart_sales_data_staging
+GROUP BY gender
+ORDER BY gen_cnt DESC;
+
+-- 6. What is the gender distribution per branch?
+
+-- 7. Which time of the day do customers give most ratings?
+-- 8. Which time of the day do customers give most ratings per branch?
+-- 9. Which day fo the week has the best avg ratings?
+-- 10. Which day of the week has the best average ratings per branch?
+
+
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- --------------------------------------------------------------------------- END OF EXPLORATORY DATA ANALYSIS ------------------------------------------------------------------------------------
 

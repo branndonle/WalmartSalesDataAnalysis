@@ -22,63 +22,79 @@ This project aims to analyze Walmart's sales data to identify key factors that i
 > 3. Add a new column, **_month_name_**, that contains the month of the year when the transaction took place (Jan, Feb, Mar, etc). This will allow us to determine which month of the year is the slowest, when it is moderate, and where we make the most sales/profit.
 
 ## Exploratory Data Analysis
-### General Questions
+### General Insight
 > 1. How many unique cities are there?
 
 > 2. Which city is each branch located in?
 
-### Product Insight
-> 1. How many unique product lines does the data have?
+> 3. How many sales transactions were there?
 
-> 2. What is the most common payment method?
+> 4. How many products were sold?
+
+> 5. When was the first and last transaction?
+
+### Product & Sales Information
+> 1. How many product lines are there?
+
+> 2. What is the most common form of payment?
  
-> 3. What is the most selling product line?
+> 3. What is the most popular product category?
  
-> 4. What is the total revenue by month?
+> 4. Which branches sold more products than the average number of products sold?
+
+> 5. What is the total revenue each month?
  
-> 5. What month had the largest COGS?
+> 6. Which city genereates the most revenue?
 
-> 6. What product line had the largest revenue?
+> 7. What month had the largest COGS?
+
+> 8. What product line had the largest revenue?
  
-> 7. What is the city with the largest revenue?
+> 9. What is the city with the largest revenue?
 
-> 8. What product line had the largest VAT?
+> 10. What is the average rating of each product line?
 
-> 9. Fetch each product line and add a column to those product line showing "Good", "Bad". Good if its greater than average sales
+> 11. Label product_lines as good or bad based on if the total is greater than average sales
 
-> 10. Which branch sold more products than average product sold?
+### Profitable & Finacial Metrics
+> 1. Which branch is the most profitable?
 
-> 11. What is the most common product line by gender?
+> 2. What is the gross margin percentage by product line?
 
-> 12. What is the average rating of each product line?
+> 3. What is the comparison between the cost of goods sold versus revenue?
 
-### Sales Insight
-> 1. Number of sales made in each time of the day per weekday
+### Sales Performance & Trends
+> 1. Which city has the largest tax percent?
 
-> 2. Which of the customer types brings the most revenue?
+> 2. Number of sales made in each time of the day per weekday
 
-> 3. Which city has the largest tax percent/ VAT (Value Added Tax)?
+> 3. Which of the customer types brings the most revenue?
 
 > 4. Which customer type pays the most in VAT?
 
+> 5. What are the total sales by each branch? 
+
+> 6. What does the sales growth over time look like?
+
+> 7. What is the yearly sales growth?
+
 ### Customer Insight
-> 1. How many unique customer types does the data have?
+> 1. How many customer types are there?
 
-> 2. How many unique payment methods does the data have?
+> 2. Which customer type spends more?
 
-> 3. What is the most common customer type?
+> 3. What is the most frequent customer type seen?
 
-> 4. Which customer type makes the most transactions?
+> 4. What is the sales difference between customer segments? 
 
-> 5. What is the gender of most of the customers?
+> 5. How many payment methods are there?
 
-> 6. What is the gender distribution per branch?
+> 6. When do the most ratings occur during the day?
 
-> 7. Which time of the day do customers give most ratings?
+> 7. Which Payment Method Has the Highest Average Rating?
 
-> 8. Which time of the day do customers give most ratings per branch?
+> 8. Which day of the week has the best average ratings?
 
-> 9. Which day fo the week has the best avg ratings?
+> 9. Which day of the week has the best average ratings per branch?
 
-> 10. Which day of the week has the best average ratings per branch?
-
+> 10. Which branch has the best customer satisfaction rating?

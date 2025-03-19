@@ -241,12 +241,73 @@ GROUP BY gender
 ORDER BY gen_cnt DESC;
 
 -- 6. What is the gender distribution per branch?
+SELECT gender, COUNT(*) AS gender_cnt
+FROM walmart_sales_data_staging
+WHERE branch = 'A'
+GROUP BY gender
+ORDER BY gender DESC;
+
+SELECT gender, COUNT(*) AS gender_cnt
+FROM walmart_sales_data_staging
+WHERE branch = 'B'
+GROUP BY gender
+ORDER BY gender DESC;
+
+SELECT gender, COUNT(*) AS gender_cnt
+FROM walmart_sales_data_staging
+WHERE branch = 'C'
+GROUP BY gender
+ORDER BY gender DESC;
 
 -- 7. Which time of the day do customers give most ratings?
--- 8. Which time of the day do customers give most ratings per branch?
--- 9. Which day fo the week has the best avg ratings?
--- 10. Which day of the week has the best average ratings per branch?
+SELECT time_of_day, AVG(rating) AS avg_rating
+FROM walmart_sales_data_staging
+GROUP BY time_of_day
+ORDER BY avg_rating DESC;
 
+-- 8. Which time of the day do customers give most ratings per branch?
+SELECT time_of_day, AVG(rating) as avg_rating
+FROM walmart_sales_data_staging
+WHERE branch = 'A'
+GROUP BY time_of_day
+ORDER BY avg_rating DESC;
+
+SELECT time_of_day, AVG(rating) as avg_rating
+FROM walmart_sales_data_staging
+WHERE branch = 'B'
+GROUP BY time_of_day
+ORDER BY avg_rating DESC;
+
+SELECT time_of_day, AVG(rating) as avg_rating
+FROM walmart_sales_data_staging
+WHERE branch = 'C'
+GROUP BY time_of_day
+ORDER BY avg_rating DESC;
+
+-- 9. Which day of the week has the best avg ratings?
+SELECT day_of_week, AVG(rating) as avg_rating
+FROM walmart_sales_data_staging
+GROUP BY day_of_week
+ORDER BY avg_rating DESC;
+
+-- 10. Which day of the week has the best average ratings per branch?
+SELECT day_of_week, AVG(rating) as avg_rating
+FROM walmart_sales_data_staging
+WHERE branch = 'A'
+GROUP BY day_of_week
+ORDER BY avg_rating DESC;
+
+SELECT day_of_week, AVG(rating) as avg_rating
+FROM walmart_sales_data_staging
+WHERE branch = 'B'
+GROUP BY day_of_week
+ORDER BY avg_rating DESC;
+
+SELECT day_of_week, AVG(rating) as avg_rating
+FROM walmart_sales_data_staging
+WHERE branch = 'C'
+GROUP BY day_of_week
+ORDER BY avg_rating DESC;
 
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- --------------------------------------------------------------------------- END OF EXPLORATORY DATA ANALYSIS ------------------------------------------------------------------------------------
